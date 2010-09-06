@@ -1,0 +1,19 @@
+Welcome to Langbar plugin README
+
+It simply creates Block of flags with labels, for easy way to change whole sites language.
+
+It get all languages from your settings and makes icons for it.
+
+If you need to change flags, they are placed in folder /app/plugins/langbar/webroot/img/flags/
+flags are named in 3-chars code defined in ISO 3611 alpha-3 (like eng.png, ger.png, etc..)
+
+Only option i recommend you, is to turn off showing Block title, in your admin
+
+Blocks > Blocks > Langbar > Edit > uncheck "show Title" > save
+
+I hope you like it
+
+If there is some problem, send me message on marek.sebera@gmail.com
+I'll try to solve your problems with my work :)
+
+Nic day

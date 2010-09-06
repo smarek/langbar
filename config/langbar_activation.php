@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Translate Activation
+ * Langbar Activation
  *
- * @package  Croogo
- * @author   Fahad Ibnay Heylaal <contact@fahad19.com>
+ * @package  Langbar
+ * @author   Marek Sebera <marek.sebera@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link     http://www.croogo.org
+ * @link     http://www.msebera.cz
  */
 class LangbarActivation {
 
@@ -55,7 +55,7 @@ class LangbarActivation {
      * @return void
      */
     public function onDeactivation(&$controller) {
-        $controller->Block->deleteAll(array('Block.title' => "Langbar"), false);
+        $controller->Block->deleteAll(array('Block.alias' => "langbar"), false);
         return true;
     }
 
