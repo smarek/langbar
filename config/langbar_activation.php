@@ -55,7 +55,7 @@ class LangbarActivation {
      * @return void
      */
     public function onDeactivation(&$controller) {
-        $controller->Block->deleteAll(array('Block.alias' => "langbar"), false);
+        $controller->Block->deleteAll(array('Block.alias' => "langbar"), false, array('beforeDelete', 'afterDelete'));
         return true;
     }
 
