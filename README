@@ -5,7 +5,7 @@ It simply creates Block of flags with labels, for easy way to change whole sites
 It get all languages from your settings and makes icons for it.
 
 If you need to change flags, they are placed in folder /app/plugins/langbar/webroot/img/flags/
-flags are named in 3-chars code defined in ISO 3611 alpha-3 (like eng.png, ger.png, etc..)
+flags are named in 3-chars code defined in ISO 3611 alpha-2 (like eng.png, ger.png, etc..)
 
 Only option i recommend you, is to turn off showing Block title, in your admin
 
@@ -17,3 +17,12 @@ If there is some problem, send me message on marek.sebera@gmail.com
 I'll try to solve your problems with my work :)
 
 Released under Artistic license (could be found on http://www.opensource.org/licenses/artistic-license.php )
+
+F.A.Q !
+
+(Q) Links for my languages doesn't work correctly. / Links are pointing to something like "http://domain.tld/English" instead of "http://domain.tld/eng"
+(A) The link is created from languages table, which is manageable in administration.
+Go to : Administration > Settings > Languages
+and change native column to 3-letter code (ISO 3611 alpha-2), which is same as used in /app/locale/ folder
+
+Final row should look like this:      (id: auto_created) (title: whatever) (native: 3-letters-code) (alias: whatever)
