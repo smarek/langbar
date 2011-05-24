@@ -10,7 +10,7 @@ class LangbarHelper extends AppHelper {
     function getLangs() {
 	if(($langs = Cache::read('languages_all')) === false){
         $this->Language = & ClassRegistry::init('Language');
-	$langs = $this->Language->find('all');
+	$langs = $this->Language->find('all', array('conditions' => array('status' => 1)));
 	Cache::write('languages_all', $langs);
 	}
         $slug = isset($this->params["named"]["slug"]) ? $this->params["named"]["slug"] : "";
