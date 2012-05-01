@@ -15,7 +15,8 @@ class LangbarHelper extends AppHelper {
 	}
         $slug = isset($this->params["named"]["slug"]) ? $this->params["named"]["slug"] : "";
         $type = isset($this->params["named"]["type"]) ? $this->params["named"]["type"] : "";
-        return array($langs, $slug, $type);
+        $others = $this->params["pass"];
+        return array($langs, $slug, $type, $others);
     }
 
 }
