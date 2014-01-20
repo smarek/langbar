@@ -10,22 +10,22 @@
  */
 class LangbarActivation {
 
-    /**
-     * onActivate will be called if this returns true
-     *
-     * @param  object $controller Controller
-     * @return boolean
-     */
+/**
+ * onActivate will be called if this returns true
+ *
+ * @param  object $controller Controller
+ * @return boolean
+ */
     public function beforeActivation(&$controller) {
         return true;
     }
 
-    /**
-     * Called after activating the plugin in ExtensionsPluginsController::admin_toggle()
-     *
-     * @param object $controller Controller
-     * @return void
-     */
+/**
+ * Called after activating the plugin in ExtensionsPluginsController::admin_toggle()
+ *
+ * @param object $controller Controller
+ * @return void
+ */
     public function onActivation(&$controller) {
         $controller->Block->save(array(
             'region_id' => 4,
@@ -38,22 +38,22 @@ class LangbarActivation {
         return true;
     }
 
-    /**
-     * onDeactivate will be called if this returns true
-     *
-     * @param  object $controller Controller
-     * @return boolean
-     */
+/**
+ * onDeactivate will be called if this returns true
+ *
+ * @param  object $controller Controller
+ * @return boolean
+ */
     public function beforeDeactivation(&$controller) {
         return true;
     }
 
-    /**
-     * Called after deactivating the plugin in ExtensionsPluginsController::admin_toggle()
-     *
-     * @param object $controller Controller
-     * @return void
-     */
+/**
+ * Called after deactivating the plugin in ExtensionsPluginsController::admin_toggle()
+ *
+ * @param object $controller Controller
+ * @return void
+ */
     public function onDeactivation(&$controller) {
         $controller->Block->deleteAll(array('Block.alias' => "langbar"), false, array('beforeDelete', 'afterDelete'));
         return true;
